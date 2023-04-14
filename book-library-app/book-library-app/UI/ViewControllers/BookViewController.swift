@@ -13,7 +13,7 @@ class BookViewController: UIViewController {
 
     lazy var coverImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "book.closed.fill")
+        imageView.image = UIImage(systemName: "book.fill")
         imageView.tintColor = UIColor.systemPurple
         imageView.contentMode = .scaleAspectFit
         return imageView
@@ -81,6 +81,8 @@ class BookViewController: UIViewController {
                 let labelSize = self.descriptionLabel.sizeThatFits(CGSize(width: self.descriptionScrollView.frame.width, height: CGFloat.greatestFiniteMagnitude))
                 self.descriptionLabel.frame = CGRect(origin: CGPoint.zero, size: labelSize)
                 self.descriptionScrollView.contentSize = labelSize
+            } else {
+                self.descriptionLabel.text = "There is no description for book"
             }
         }
         

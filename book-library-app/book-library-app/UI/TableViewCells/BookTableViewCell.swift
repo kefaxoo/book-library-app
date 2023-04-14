@@ -21,7 +21,7 @@ class BookTableViewCell: UITableViewCell {
     
     lazy var coverImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(systemName: "book.closed.fill")
+        imageView.image = UIImage(systemName: "book.fill")
         imageView.tintColor = UIColor.systemPurple
         imageView.contentMode = .scaleAspectFit
         return imageView

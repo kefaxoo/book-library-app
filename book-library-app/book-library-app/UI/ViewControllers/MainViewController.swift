@@ -63,5 +63,6 @@ extension MainViewController: UITableViewDataSource {
 extension MainViewController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         self.navigationController?.pushViewController(BookViewController(book: books[indexPath.row]), animated: true)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
