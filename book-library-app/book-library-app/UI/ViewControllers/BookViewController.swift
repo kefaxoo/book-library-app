@@ -121,6 +121,7 @@ class BookViewController: UIViewController {
         infoStackView.snp.makeConstraints { make in
             make.top.equalTo(self.view.safeAreaLayoutGuide.snp.top).offset(16)
             make.leading.equalTo(coverImageView.snp.trailing).offset(16)
+            make.trailing.equalToSuperview().offset(-16)
         }
         
         descriptionScrollView.snp.makeConstraints { make in
